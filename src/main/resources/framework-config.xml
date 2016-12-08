@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.plusir.com/config"
+    xsi:schemaLocation="http://www.plusir.com/config http://www.plusir.com:10086/xml/config.xsd">
+  <properties>
+    <property name="framework.system.name">无锡研究院物联网云平台代理wangguan</property>
+  </properties>
+  
+  <trees>
+    <tree name="framework.logger">
+      <node id="stdoutPattern"><data>%m%n</data></node>
+      <node id="loggers">
+        <node id="FRAMEWORK_STATUS">
+          <node id="level"><data>info</data></node>
+          <node id="state"><data>enabled</data></node>
+        </node>
+        <node id="MQTT_SERVER">
+           <node id="level"><data>debug</data></node>
+           <node id="state"><data>enabled</data></node>
+        </node>
+        <node id="WEATHERSTATION_SERVER">
+          <node id="level"><data>debug</data></node>
+          <node id="state"><data>enabled</data></node>
+        </node>
+      </node>
+    </tree>
+    <tree name="framework.bluemix">
+      <node id="devices">
+        <node id="WEATHERSTATION">
+          <node id="org"><data>rlkbbo</data></node>
+          <node id="deviceType"><data>weatherStation</data></node>
+          <node id="deviceId"><data></data></node>
+          <node id="authMethod"><data>token</data></node>
+          <node id="token"><data></data></node>
+        </node>
+      </node>
+    </tree>
+  </trees>
+</configuration>
